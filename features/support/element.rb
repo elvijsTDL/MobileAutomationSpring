@@ -39,4 +39,15 @@ class Elements
     end
   end
 
+  def get_text(timeout: 15)
+    wait_opts = {
+      timeout: timeout,
+      interval: 0.3,
+      message: "Element was not found. Selector method: #{@type} , Selector: #{@value} "
+    }
+    $driver.wait(wait_opts) do
+      $driver.find_element(@type,@value).text
+    end
+  end
+
 end

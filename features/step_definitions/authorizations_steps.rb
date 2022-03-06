@@ -13,3 +13,15 @@ end
 Then(/^User sees the my profile button$/) do
   @screens.main_screen.my_profile_button_exists
 end
+
+Then(/^User opens my profile page$/) do
+  @screens.main_screen.open_my_profile_page
+end
+
+And(/^The logged in users name is ([^"]*)$/) do |name|
+  @screens.my_profile_screen.check_if_name_visible(name)
+end
+
+And(/^The logged in users email is ([^"]*)$/) do |email|
+  @screens.my_profile_screen.check_if_email_visible(email)
+end

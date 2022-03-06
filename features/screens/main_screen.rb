@@ -8,4 +8,8 @@ class MainScreen
     @my_profile_button.get_element
   end
 
+  def open_my_profile_page
+    @my_profile_button.click
+  end
+
 end

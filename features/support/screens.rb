@@ -8,4 +8,8 @@ class Screens
     @main_screen ||= MainScreen.new
   end
 
+  def my_profile_screen
+    @my_profile_screen ||= MyProfileScreen.new
+  end
+
 end

@@ -6,4 +6,6 @@ Feature: Authorization test cases
       Given User has opened the login page
       And User has input their email and password
       And User clicks on the login button
-      Then User sees the my profile button
+      Then User opens my profile page
+      And The logged in users name is YoloBolo
+      And The logged in users email is tdltdl@gmail.com
