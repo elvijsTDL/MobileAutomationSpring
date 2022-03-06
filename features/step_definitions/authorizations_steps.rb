@@ -25,3 +25,31 @@ end
 And(/^The logged in users email is ([^"]*)$/) do |email|
   @screens.my_profile_screen.check_if_email_visible(email)
 end
+
+And(/^User inputs (.*) into the email field$/) do |email|
+  @screens.auth_screen.input_email(email)
+end
+
+And(/^User inputs (.*) into the password field$/) do |password|
+  @screens.auth_screen.input_password(password)
+end
+
+And(/^User goes to sign up page$/) do
+  @screens.auth_screen.click_sign_up_button
+end
+
+And(/^User inputs new user credentials$/) do
+  pending
+end
+
+And(/^User clicks sign up$/) do
+  pending
+end
+
+And(/^User skips the coupon code screen$/) do
+  pending
+end
+
+And(/^User skips the phone verification$/) do
+  pending
+end

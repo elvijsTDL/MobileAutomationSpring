@@ -13,7 +13,7 @@ opts = {
   }
 }
 
-$driver = Appium::Driver.new(opts,true)
+$driver = Appium::Driver.new(opts, true)
 
 Before do
   $driver.start_driver
