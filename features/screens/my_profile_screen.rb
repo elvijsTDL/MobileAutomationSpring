@@ -20,5 +20,4 @@ class MyProfileScreen
     actual = @users_name.get_text
     raise "Name is not correct , expected: #{name} , actual: #{actual}" unless actual === name
   end
-
 end

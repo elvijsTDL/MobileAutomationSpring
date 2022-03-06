@@ -12,4 +12,8 @@ class Screens
     @my_profile_screen ||= MyProfileScreen.new
   end
 
+  def products_screen
+    @products_screen ||= ProductScreen.new
+  end
+
 end

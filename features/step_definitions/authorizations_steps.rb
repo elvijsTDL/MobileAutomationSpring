@@ -35,21 +35,26 @@ And(/^User inputs (.*) into the password field$/) do |password|
 end
 
 And(/^User goes to sign up page$/) do
-  @screens.auth_screen.click_sign_up_button
+  @screens.auth_screen.go_to_sign_up_page
 end
 
 And(/^User inputs new user credentials$/) do
-  pending
+  @screens.auth_screen.input_random_new_user_credentials
 end
 
 And(/^User clicks sign up$/) do
-  pending
+  @screens.auth_screen.click_sign_up_button
 end
 
 And(/^User skips the coupon code screen$/) do
-  pending
+  @screens.auth_screen.skip_coupon_verification
 end
 
 And(/^User skips the phone verification$/) do
-  pending
+  @screens.auth_screen.skip_phone_verification
+end
+
+Then(/^The random email used for registration is shown$/) do
+  email_used = @screens.auth_screen.get_random_email_used
+  @screens.my_profile_screen.check_if_email_visible(email_used)
 end
